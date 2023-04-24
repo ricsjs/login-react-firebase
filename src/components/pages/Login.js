@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import './Login.css';
 
 function Login(){
@@ -11,7 +13,7 @@ function Login(){
                     <input className='inputLogin' type='password' placeholder='Senha'/><br/><br/>
                     <button className='btnSubmit' type='submit'>Entrar</button>
                     <div className='linkCadastro'>
-                        <a href='#'>Faça seu cadastro!</a>
+                        <Link to='/cadastro'>Faça seu cadastro!</Link>
                     </div>
                 </form>
             </div>
