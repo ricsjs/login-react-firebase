@@ -16,8 +16,12 @@ function Cadastro(){
             setEmail('')
             setSenha('')
         })
-        .catch(() => {
-            alert("A senha deve ser maior que 6 caracteres")
+        .catch((error) => {
+            if(error.code === 'auth/wark-password'){
+                alert("Senha muito fraca.")
+            }else if(error.code === 'auth/email-already-in-use'){
+                alert("Esse e-mail já está cadastrado!")
+            }
         })
     }
 
